@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +12,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 :root {
   --black:#090909;
-  --dark:#111111;
+  --dark:#111;
   --dark2:#171717;
   --silver:#c4c6c8;
   --silver2:#85888b;
@@ -50,11 +50,8 @@ img{display:block;width:100%}
   flex-direction:column;gap:18px;
   transition:opacity .7s ease,visibility .7s ease;
 }
-.preloader.hide{opacity:0;visibility:hidden}
-.preloader-logo{
-  font-size:28px;letter-spacing:13px;
-  font-weight:400;color:#ddd;
-}
+.preloader.hide{opacity:0;visibility:hidden;pointer-events:none}
+.preloader-logo{font-size:28px;letter-spacing:13px;font-weight:400;color:#ddd}
 .loader-line{width:130px;height:1px;background:#333;overflow:hidden}
 .loader-line span{
   display:block;width:100%;height:100%;
@@ -77,10 +74,7 @@ header.scrolled{
   backdrop-filter:blur(16px);
   border-color:var(--line);
 }
-.logo{
-  font-size:23px;font-weight:500;letter-spacing:9px;
-  color:#e7e7e7;white-space:nowrap;
-}
+.logo{font-size:23px;font-weight:500;letter-spacing:9px;color:#e7e7e7;white-space:nowrap}
 .nav-links{display:flex;gap:38px;align-items:center}
 .nav-links a{
   font-size:10px;letter-spacing:2px;text-transform:uppercase;
@@ -93,10 +87,7 @@ header.scrolled{
   text-transform:uppercase;transition:.3s;
 }
 .header-cta:hover{background:#eee;color:#111}
-.menu-toggle{
-  display:none;background:none;border:0;color:white;
-  font-size:22px;cursor:pointer;
-}
+.menu-toggle{display:none;background:none;border:0;color:white;font-size:22px;cursor:pointer}
 
 /* GENERAL */
 section{position:relative}
@@ -108,10 +99,7 @@ section{position:relative}
   font-family:var(--serif);font-size:clamp(42px,6vw,82px);
   font-weight:400;line-height:.95;
 }
-.section-description{
-  color:#999;font-size:12px;line-height:2;
-  max-width:440px;font-weight:300;
-}
+.section-description{color:#999;font-size:12px;line-height:2;max-width:440px;font-weight:300}
 .silver-line{width:45px;height:1px;background:#aaa;margin:27px 0}
 
 /* HERO */
@@ -129,10 +117,7 @@ section{position:relative}
   pointer-events:none;
 }
 .hero-content{position:relative;z-index:3;max-width:590px}
-.hero-eyebrow{
-  font-size:10px;letter-spacing:5px;color:#aaa;
-  margin-bottom:28px;text-transform:uppercase;
-}
+.hero-eyebrow{font-size:10px;letter-spacing:5px;color:#aaa;margin-bottom:28px;text-transform:uppercase}
 .hero h1{
   font-family:var(--serif);font-weight:400;
   font-size:clamp(66px,10vw,135px);
@@ -143,16 +128,12 @@ section{position:relative}
   -webkit-text-stroke:1px #c5c5c5;
   margin-left:50px;margin-top:17px;
 }
-.hero-subtitle{
-  margin-top:38px;font-size:11px;letter-spacing:4px;
-  color:#b8b8b8;text-transform:uppercase;
-}
+.hero-subtitle{margin-top:38px;font-size:11px;letter-spacing:4px;color:#b8b8b8;text-transform:uppercase}
 .hero-actions{display:flex;gap:15px;margin-top:45px;flex-wrap:wrap}
 .btn-primary,.btn-outline{
   display:inline-flex;align-items:center;justify-content:center;
   min-height:49px;padding:0 25px;
-  font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  transition:.35s;
+  font-size:9px;letter-spacing:2px;text-transform:uppercase;transition:.35s;
 }
 .btn-primary{background:#dedede;color:#111;border:1px solid #dedede}
 .btn-primary:hover{background:transparent;color:white}
@@ -174,9 +155,8 @@ section{position:relative}
 .hero-bracelet{width:76%;transform:rotate(-12deg);z-index:2}
 .hero-chain{width:43%;right:0;bottom:0;opacity:.75;transform:rotate(8deg)}
 .hero-side-note{
-  position:absolute;right:5%;bottom:10%;
-  writing-mode:vertical-rl;font-size:8px;
-  letter-spacing:4px;color:#777;
+  position:absolute;right:5%;bottom:10%;writing-mode:vertical-rl;
+  font-size:8px;letter-spacing:4px;color:#777;
 }
 .hero-scroll{
   position:absolute;bottom:35px;left:9%;
@@ -194,16 +174,10 @@ section{position:relative}
 .intro-left{max-width:540px}
 .intro-right{padding-top:25px}
 .intro-right p{margin-bottom:24px}
-.intro-signature{
-  font-family:var(--serif);font-size:28px;
-  color:#c5c5c5;font-style:italic;
-}
+.intro-signature{font-family:var(--serif);font-size:28px;color:#c5c5c5;font-style:italic}
 
 /* SEVEN SCENE SCROLL EXPERIENCE */
-.story-scroll{
-  background:#080808;
-  padding:100px 0 0;
-}
+.story-scroll{background:#080808;padding:100px 0 0}
 .story-heading{
   padding:0 9% 65px;
   display:flex;align-items:end;justify-content:space-between;gap:30px;
@@ -216,26 +190,29 @@ section{position:relative}
 .scroll-stage{
   height:100vh;min-height:600px;max-height:950px;
   position:relative;overflow:hidden;background:#111;
+  isolation:isolate;
 }
 .scroll-stage::after{
   content:"";position:absolute;inset:0;z-index:2;
-  background:linear-gradient(90deg,rgba(0,0,0,.72),transparent 70%),
-             linear-gradient(0deg,rgba(0,0,0,.48),transparent 50%);
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.72),transparent 75%),
+    linear-gradient(0deg,rgba(0,0,0,.48),transparent 55%);
   pointer-events:none;
 }
 .scene{
-  position:absolute;inset:0;opacity:0;visibility:hidden;
+  position:absolute;inset:0;
+  opacity:0;visibility:hidden;
   display:flex;align-items:center;
+  overflow:hidden;
+  will-change:opacity,visibility;
 }
 .scene:first-child{opacity:1;visibility:visible}
-.scene-image{
-  position:absolute;inset:0;overflow:hidden;
-}
+.scene-image{position:absolute;inset:0;overflow:hidden;background:#171717}
 .scene-image img{
-  width:100%;height:100%;object-fit:cover;
-  object-position:center;
-  transform:scale(1.18);
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  transform:scale(1.15);
   filter:brightness(.76) contrast(1.08);
+  will-change:transform;
 }
 .scene:nth-child(2) .scene-image img{object-position:center 42%}
 .scene:nth-child(3) .scene-image img{object-position:center 48%}
@@ -245,21 +222,15 @@ section{position:relative}
 .scene:nth-child(7) .scene-image img{object-position:center}
 .scene-content{
   position:relative;z-index:4;
-  width:min(550px,48%);margin-left:10%;
-  padding-top:50px;
+  width:min(550px,48%);margin-left:10%;padding-top:50px;
+  will-change:transform,opacity;
 }
-.scene-number{
-  font-size:10px;letter-spacing:4px;color:#c3c3c3;
-  margin-bottom:25px;
-}
+.scene-number{font-size:10px;letter-spacing:4px;color:#c3c3c3;margin-bottom:25px}
 .scene-content h3{
   font-family:var(--serif);font-size:clamp(48px,7vw,92px);
   line-height:.9;font-weight:400;margin-bottom:25px;
 }
-.scene-content p{
-  color:#c3c3c3;font-size:11px;line-height:2;
-  max-width:340px;font-weight:300;
-}
+.scene-content p{color:#c3c3c3;font-size:11px;line-height:2;max-width:340px;font-weight:300}
 .scene-link{
   display:inline-block;margin-top:30px;
   font-size:9px;letter-spacing:3px;text-transform:uppercase;
@@ -274,8 +245,7 @@ section{position:relative}
 .counter-progress{position:absolute;left:0;top:0;height:1px;width:14.28%;background:white}
 .story-caption{
   position:absolute;z-index:5;right:8%;top:55px;
-  font-size:8px;letter-spacing:4px;color:#ccc;
-  writing-mode:vertical-rl;
+  font-size:8px;letter-spacing:4px;color:#ccc;writing-mode:vertical-rl;
 }
 
 /* COLLECTION */
@@ -284,38 +254,23 @@ section{position:relative}
   display:flex;justify-content:space-between;align-items:end;
   margin-bottom:65px;gap:30px;
 }
-.collection-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:48px 22px;
-}
+.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 22px}
 .product-card{cursor:pointer}
-.product-image{
-  height:390px;background:#191919;overflow:hidden;
-  position:relative;
-}
+.product-image{height:390px;background:#191919;overflow:hidden;position:relative}
 .product-image img{
   width:100%;height:100%;object-fit:cover;
   transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .7s;
   filter:brightness(.83) grayscale(12%);
 }
-.product-card:hover .product-image img{
-  transform:scale(1.07);filter:brightness(1);
-}
+.product-card:hover .product-image img{transform:scale(1.07);filter:brightness(1)}
 .product-tag{
   position:absolute;top:18px;left:18px;
   font-size:8px;letter-spacing:2px;color:#eee;
   background:rgba(0,0,0,.55);padding:8px 11px;
 }
-.product-info{
-  padding:20px 2px;display:flex;justify-content:space-between;gap:10px;
-}
-.product-info h3{
-  font-family:var(--serif);font-size:25px;font-weight:400;
-}
-.product-info span{
-  font-size:8px;letter-spacing:2px;color:#888;
-  text-transform:uppercase;padding-top:8px;
-}
+.product-info{padding:20px 2px;display:flex;justify-content:space-between;gap:10px}
+.product-info h3{font-family:var(--serif);font-size:25px;font-weight:400}
+.product-info span{font-size:8px;letter-spacing:2px;color:#888;text-transform:uppercase;padding-top:8px}
 
 /* EDITORIAL */
 .editorial{
@@ -326,14 +281,8 @@ section{position:relative}
     url("https://4mama.com.ua/images/news/news/shcho-podaruvati-cholovikovi-zi-sribla-big.jpg") center/cover no-repeat;
 }
 .editorial-content{max-width:600px}
-.editorial h2{
-  font-family:var(--serif);font-size:clamp(55px,8vw,100px);
-  font-weight:400;line-height:.88;
-}
-.editorial p{
-  margin-top:30px;max-width:380px;
-  color:#c1c1c1;font-size:11px;line-height:2;
-}
+.editorial h2{font-family:var(--serif);font-size:clamp(55px,8vw,100px);font-weight:400;line-height:.88}
+.editorial p{margin-top:30px;max-width:380px;color:#c1c1c1;font-size:11px;line-height:2}
 
 /* OUR STORY */
 .our-story{
@@ -342,10 +291,7 @@ section{position:relative}
   align-items:center;background:#0c0c0c;
 }
 .story-image{height:520px;overflow:hidden;background:#171717}
-.story-image img{
-  height:100%;object-fit:cover;
-  filter:grayscale(30%) brightness(.78);
-}
+.story-image img{height:100%;object-fit:cover;filter:grayscale(30%) brightness(.78)}
 .story-text p{margin-top:25px}
 .story-text .section-title{max-width:500px}
 
@@ -358,98 +304,51 @@ section{position:relative}
 }
 .contact-header{text-align:center;margin-bottom:70px}
 .contact-header .section-title{margin-bottom:22px}
-.contact-header p{
-  color:#999;font-size:11px;line-height:2;
-  max-width:440px;margin:auto;
-}
-.contact-layout{
-  display:grid;grid-template-columns:.8fr 1.2fr;
-  gap:10%;max-width:1100px;margin:auto;
-}
+.contact-header p{color:#999;font-size:11px;line-height:2;max-width:440px;margin:auto}
+.contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:10%;max-width:1100px;margin:auto}
 .contact-info{padding-top:15px}
-.contact-info h3{
-  font-family:var(--serif);font-size:37px;font-weight:400;
-  margin-bottom:18px;
-}
-.contact-info>p{
-  font-size:11px;color:#999;line-height:2;
-  max-width:310px;margin-bottom:45px;
-}
+.contact-info h3{font-family:var(--serif);font-size:37px;font-weight:400;margin-bottom:18px}
+.contact-info>p{font-size:11px;color:#999;line-height:2;max-width:310px;margin-bottom:45px}
 .contact-detail{margin-bottom:27px}
 .contact-detail span{
   display:block;font-size:8px;letter-spacing:3px;
   color:#777;text-transform:uppercase;margin-bottom:9px;
 }
-.contact-detail a,.contact-detail strong{
-  font-size:12px;font-weight:400;color:#ddd;
-}
-.inquiry-form{
-  border:1px solid rgba(255,255,255,.15);
-  padding:40px;background:rgba(255,255,255,.018);
-}
-.form-heading{
-  font-family:var(--serif);font-size:35px;
-  font-weight:400;margin-bottom:8px;
-}
-.form-subheading{
-  color:#888;font-size:10px;line-height:1.8;
-  margin-bottom:35px;
-}
-.form-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:23px 18px;
-}
+.contact-detail a,.contact-detail strong{font-size:12px;font-weight:400;color:#ddd}
+.inquiry-form{border:1px solid rgba(255,255,255,.15);padding:40px;background:rgba(255,255,255,.018)}
+.form-heading{font-family:var(--serif);font-size:35px;font-weight:400;margin-bottom:8px}
+.form-subheading{color:#888;font-size:10px;line-height:1.8;margin-bottom:35px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:23px 18px}
 .form-field{display:flex;flex-direction:column;gap:11px}
 .form-field.full{grid-column:1/-1}
-.form-field label{
-  font-size:8px;letter-spacing:2px;
-  text-transform:uppercase;color:#aaa;
-}
+.form-field label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#aaa}
 .form-field input,.form-field select,.form-field textarea{
   width:100%;border:0;border-bottom:1px solid #444;
-  background:transparent;color:#eee;
-  padding:12px 0;font-size:11px;outline:none;
-  border-radius:0;transition:border-color .3s;
+  background:transparent;color:#eee;padding:12px 0;
+  font-size:11px;outline:none;border-radius:0;transition:border-color .3s;
 }
-.form-field input:focus,.form-field select:focus,
-.form-field textarea:focus{border-color:#ddd}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:#ddd}
 .form-field input::placeholder,.form-field textarea::placeholder{color:#666}
 .form-field select{color:#aaa}
 .form-field select option{background:#111;color:#eee}
 .form-field textarea{resize:vertical;min-height:75px}
 .form-submit{
-  margin-top:32px;width:100%;height:54px;
+  margin-top:32px;width:100%;min-height:54px;
   background:#dedede;color:#111;border:1px solid #dedede;
   font-size:9px;letter-spacing:3px;text-transform:uppercase;
   cursor:pointer;transition:.35s;
 }
 .form-submit:hover{background:transparent;color:white}
-.form-note{
-  margin-top:16px;color:#777;font-size:9px;line-height:1.8;
-}
-.form-message{
-  display:none;margin-top:16px;
-  color:#ddd;font-size:11px;line-height:1.7;
-}
+.form-note{margin-top:16px;color:#777;font-size:9px;line-height:1.8}
+.form-message{display:none;margin-top:16px;color:#ddd;font-size:11px;line-height:1.7}
 
 /* FOOTER */
-footer{
-  background:#080808;padding:45px 8% 30px;
-  border-top:1px solid var(--line);
-}
-.footer-top{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:30px;padding-bottom:40px;
-}
+footer{background:#080808;padding:45px 8% 30px;border-top:1px solid var(--line)}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:30px;padding-bottom:40px}
 .footer-logo{font-size:22px;letter-spacing:8px}
-.footer-tagline{
-  color:#777;font-size:9px;letter-spacing:3px;
-  text-transform:uppercase;
-}
+.footer-tagline{color:#777;font-size:9px;letter-spacing:3px;text-transform:uppercase}
 .footer-links{display:flex;gap:25px;flex-wrap:wrap}
-.footer-links a{
-  font-size:8px;letter-spacing:2px;color:#999;
-  text-transform:uppercase;transition:.3s;
-}
+.footer-links a{font-size:8px;letter-spacing:2px;color:#999;text-transform:uppercase;transition:.3s}
 .footer-links a:hover{color:white}
 .footer-bottom{
   border-top:1px solid #222;padding-top:22px;
@@ -463,8 +362,7 @@ footer{
   width:48px;height:48px;border-radius:50%;
   background:#e5e5e5;color:#111;
   display:flex;align-items:center;justify-content:center;
-  font-size:21px;box-shadow:0 5px 25px rgba(0,0,0,.3);
-  transition:.3s;
+  font-size:21px;box-shadow:0 5px 25px rgba(0,0,0,.3);transition:.3s;
 }
 .whatsapp-float:hover{transform:translateY(-5px);background:#fff}
 
@@ -494,8 +392,7 @@ footer{
     padding:25px 7%;background:rgba(8,8,8,.97);
     display:flex;flex-direction:column;align-items:flex-start;
     gap:25px;border-top:1px solid #222;
-    opacity:0;visibility:hidden;transform:translateY(-10px);
-    transition:.3s;
+    opacity:0;visibility:hidden;transform:translateY(-10px);transition:.3s;
   }
   .nav-links.open{opacity:1;visibility:visible;transform:translateY(0)}
   .nav-links a{font-size:11px}
@@ -513,7 +410,7 @@ footer{
   .story-heading{padding:0 7% 40px;display:block}
   .story-heading-note{margin-top:25px}
   .scroll-stage{height:78svh;min-height:560px;max-height:none}
-  .scene-content{width:80%;margin-left:7%;padding-top:100px}
+  .scene-content{width:82%;margin-left:7%;padding-top:75px}
   .scene-content h3{font-size:58px}
   .scene-content p{max-width:290px;font-size:10px}
   .scene-image img{object-position:60% center}
@@ -556,23 +453,19 @@ footer{
 
 <body class="loading">
 
-<!-- PRELOADER -->
 <div class="preloader" id="preloader">
   <div class="preloader-logo">SERPODEL</div>
   <div class="loader-line"><span></span></div>
 </div>
 
-<!-- HEADER -->
 <header id="header">
   <a href="#home" class="logo">SERPODEL</a>
-
   <nav class="nav-links" id="navLinks">
     <a href="#home">Home</a>
     <a href="#collection">Collection</a>
     <a href="#story">Our Story</a>
     <a href="#contact">Contact</a>
   </nav>
-
   <a href="#contact" class="header-cta">Make an inquiry</a>
   <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
     <i class="fa-solid fa-bars"></i>
@@ -581,13 +474,11 @@ footer{
 
 <main>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-content">
     <div class="hero-eyebrow">Men's Silver Jewelry · Premium Selection</div>
     <h1>THE ART OF <span>DETAIL.</span></h1>
     <div class="hero-subtitle">THE DETAILS DEFINE YOU.</div>
-
     <div class="hero-actions">
       <a href="#collection" class="btn-primary">Explore Collection</a>
       <a href="#story" class="btn-outline">Discover SERPODEL</a>
@@ -602,12 +493,10 @@ footer{
       src="https://mondojewelry.co.il/cdn/shop/files/96be9d24c49e77fab3c9a29f637f2981_2.webp?v=1725893461&width=533"
       alt="Silver chain">
   </div>
-
   <div class="hero-side-note">CRAFTED TO MAKE A STATEMENT</div>
   <div class="hero-scroll"><span></span> SCROLL TO DISCOVER</div>
 </section>
 
-<!-- INTRO -->
 <section class="intro">
   <div class="intro-left reveal">
     <div class="section-kicker">01 / The Philosophy</div>
@@ -619,7 +508,6 @@ footer{
       distinctive details, timeless forms and a refined aesthetic.
     </p>
   </div>
-
   <div class="intro-right reveal">
     <p class="section-description">
       Every piece is selected to complement your style without
@@ -630,7 +518,7 @@ footer{
   </div>
 </section>
 
-<!-- SEVEN ANIMATED SCENES -->
+<!-- SEVEN SCROLL-ANIMATED PRODUCT SCENES -->
 <section class="story-scroll" id="experience">
   <div class="story-heading">
     <div>
@@ -727,17 +615,14 @@ footer{
     </article>
 
     <div class="story-caption">THE SERPODEL EXPERIENCE</div>
-
     <div class="story-counter">
       <span id="sceneCurrent">01</span>
       <span class="counter-line"><span class="counter-progress" id="counterProgress"></span></span>
       <span>07</span>
     </div>
-
   </div>
 </section>
 
-<!-- COLLECTION -->
 <section class="collection" id="collection">
   <div class="collection-header">
     <div>
@@ -751,7 +636,6 @@ footer{
   </div>
 
   <div class="collection-grid">
-
     <a href="#contact" class="product-card reveal">
       <div class="product-image">
         <img loading="lazy" src="https://azuro-republic.com/cdn/shop/products/20211027_29.jpg?v=1652453433&width=2000" alt="Silver bracelet">
@@ -807,11 +691,9 @@ footer{
       </div>
       <div class="product-info"><h3>Serpodel Selection</h3><span>Explore ↗</span></div>
     </a>
-
   </div>
 </section>
 
-<!-- EDITORIAL -->
 <section class="editorial">
   <div class="editorial-content reveal">
     <div class="section-kicker">04 / A Personal Statement</div>
@@ -824,14 +706,12 @@ footer{
   </div>
 </section>
 
-<!-- OUR STORY -->
 <section class="our-story" id="story">
   <div class="story-image reveal">
     <img loading="lazy"
       src="https://sylvajewels.com/cdn/shop/files/ChatGPTImageFeb22_2026_07_05_36PM.png?v=1771850098&width=3840"
       alt="SERPODEL silver jewelry aesthetic">
   </div>
-
   <div class="story-text reveal">
     <div class="section-kicker">05 / Our Philosophy</div>
     <h2 class="section-title">A different<br>kind of statement.</h2>
@@ -867,19 +747,16 @@ footer{
         Tell us what you're looking for.
         Share your preferred piece and any special request.
       </p>
-
       <div class="contact-detail">
         <span>WhatsApp</span>
         <a href="https://wa.me/213541394278" target="_blank" rel="noopener">
           +213 541 394 278
         </a>
       </div>
-
       <div class="contact-detail">
         <span>Collection</span>
         <strong>Silver Jewelry & Men's Accessories</strong>
       </div>
-
       <div class="contact-detail">
         <span>Brand</span>
         <strong>SERPODEL — The Details Define You</strong>
@@ -893,23 +770,19 @@ footer{
       </p>
 
       <div class="form-grid">
-
         <div class="form-field">
           <label for="fullName">Full Name *</label>
-          <input id="fullName" name="fullName" type="text"
-            placeholder="Your full name" required>
+          <input id="fullName" name="fullName" type="text" placeholder="Your full name" autocomplete="name" required>
         </div>
 
         <div class="form-field">
           <label for="email">Email Address</label>
-          <input id="email" name="email" type="email"
-            placeholder="your@email.com">
+          <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email">
         </div>
 
         <div class="form-field">
           <label for="country">Country *</label>
-          <input id="country" name="country" type="text"
-            placeholder="Your country" required>
+          <input id="country" name="country" type="text" placeholder="Your country" autocomplete="country-name" required>
         </div>
 
         <div class="form-field">
@@ -927,22 +800,18 @@ footer{
 
         <div class="form-field">
           <label for="quantity">Quantity</label>
-          <input id="quantity" name="quantity" type="number"
-            min="1" value="1" placeholder="1">
+          <input id="quantity" name="quantity" type="number" min="1" value="1">
         </div>
 
         <div class="form-field">
           <label for="budget">Budget (Optional)</label>
-          <input id="budget" name="budget" type="text"
-            placeholder="Your estimated budget">
+          <input id="budget" name="budget" type="text" placeholder="Your estimated budget">
         </div>
 
         <div class="form-field full">
           <label for="message">Message / Special Request</label>
-          <textarea id="message" name="message"
-            placeholder="Tell us more about the piece you are looking for..."></textarea>
+          <textarea id="message" name="message" placeholder="Tell us more about the piece you are looking for..."></textarea>
         </div>
-
       </div>
 
       <button type="submit" class="form-submit">
@@ -950,10 +819,8 @@ footer{
       </button>
 
       <p class="form-note">
-        By submitting this form, you will be redirected to WhatsApp
-        with your inquiry details ready to send.
+        Your request will be prepared in WhatsApp. Review it and press Send to contact SERPODEL.
       </p>
-
       <p class="form-message" id="formMessage" role="status"></p>
     </form>
   </div>
@@ -961,14 +828,12 @@ footer{
 
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div>
       <div class="footer-logo">SERPODEL</div>
       <div class="footer-tagline" style="margin-top:12px">The details define you.</div>
     </div>
-
     <div class="footer-links">
       <a href="#home">Home</a>
       <a href="#collection">Collection</a>
@@ -976,7 +841,6 @@ footer{
       <a href="#contact">Contact</a>
     </div>
   </div>
-
   <div class="footer-bottom">
     <span>© <span id="year"></span> SERPODEL. ALL RIGHTS RESERVED.</span>
     <span>DESIGNED WITH PRECISION.</span>
@@ -988,7 +852,6 @@ footer{
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -1000,7 +863,7 @@ const navLinks = document.getElementById("navLinks");
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 40);
-});
+}, { passive:true });
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("open");
@@ -1018,26 +881,20 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* PRELOADER FIX */
+/* PRELOADER - SINGLE RELIABLE HANDLER */
 function hidePreloader() {
-  const preloader = document.getElementById("preloader");
-
-  if (preloader) {
-    preloader.classList.add("hide");
-  }
-
+  const loader = document.getElementById("preloader");
+  if (loader) loader.classList.add("hide");
   document.body.classList.remove("loading");
 }
 
 window.addEventListener("load", hidePreloader);
-
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(hidePreloader, 1000);
+  setTimeout(hidePreloader, 1800);
 });
+setTimeout(hidePreloader, 3500);
 
-setTimeout(hidePreloader, 2500);
-
-/* WHATSAPP INQUIRY FORM */
+/* WHATSAPP REQUEST FORM */
 const inquiryForm = document.getElementById("inquiryForm");
 const formMessage = document.getElementById("formMessage");
 const whatsappNumber = "213541394278";
@@ -1049,13 +906,13 @@ inquiryForm.addEventListener("submit", function(event) {
 
   const data = new FormData(inquiryForm);
 
-  const fullName = data.get("fullName").trim();
-  const email = data.get("email").trim();
-  const country = data.get("country").trim();
-  const product = data.get("product");
+  const fullName = (data.get("fullName") || "").trim();
+  const email = (data.get("email") || "").trim();
+  const country = (data.get("country") || "").trim();
+  const product = data.get("product") || "";
   const quantity = data.get("quantity") || "1";
-  const budget = data.get("budget").trim();
-  const message = data.get("message").trim();
+  const budget = (data.get("budget") || "").trim();
+  const message = (data.get("message") || "").trim();
 
   const whatsappMessage =
 `Hello SERPODEL,
@@ -1080,63 +937,59 @@ Thank you.`;
 
   formMessage.style.display = "block";
   formMessage.textContent =
-    "Your inquiry is ready. WhatsApp will open so you can send your request.";
+    "Your request is ready. WhatsApp is opening. Please press Send to submit it.";
 
-  window.open(whatsappURL, "_blank", "noopener,noreferrer");
+  /* Direct navigation is more reliable on mobile Safari */
+  window.location.href = whatsappURL;
 });
 
 /* GSAP ANIMATIONS */
-window.addEventListener("load", () => {
-  if (typeof gsap === "undefined" ||
-      typeof ScrollTrigger === "undefined") {
+window.addEventListener("load", function() {
+
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
     document.querySelectorAll(".reveal").forEach(el => {
-      el.classList.add("visible");
       el.style.opacity = "1";
       el.style.transform = "none";
+    });
+    document.querySelectorAll(".scene").forEach((scene,index) => {
+      scene.style.opacity = index === 0 ? "1" : "0";
+      scene.style.visibility = index === 0 ? "visible" : "hidden";
     });
     return;
   }
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (reduceMotion) {
-    gsap.set(".reveal", {opacity:1, y:0});
-    gsap.set(".scene", {opacity:1, visibility:"visible"});
+    gsap.set(".reveal", {opacity:1,y:0});
+    gsap.set(".scene", {opacity:1,visibility:"visible",position:"relative"});
     return;
   }
 
   /* HERO ENTRANCE */
   const heroIntro = gsap.timeline({defaults:{ease:"power3.out"}});
   heroIntro
-    .from(".hero-eyebrow", {y:25, opacity:0, duration:.8})
-    .from(".hero h1", {y:55, opacity:0, duration:1}, "-=.45")
-    .from(".hero-subtitle", {y:20, opacity:0, duration:.7}, "-=.55")
-    .from(".hero-actions", {y:20, opacity:0, duration:.7}, "-=.45")
-    .from(".hero-bracelet", {
-      scale:.75, rotation:-22, opacity:0, duration:1.5
-    }, "-=1")
-    .from(".hero-chain", {
-      scale:.8, rotation:20, opacity:0, duration:1.2
-    }, "-=1.1");
+    .from(".hero-eyebrow", {y:25,opacity:0,duration:.8})
+    .from(".hero h1", {y:55,opacity:0,duration:1}, "-=.45")
+    .from(".hero-subtitle", {y:20,opacity:0,duration:.7}, "-=.55")
+    .from(".hero-actions", {y:20,opacity:0,duration:.7}, "-=.45")
+    .from(".hero-bracelet", {scale:.75,rotation:-22,opacity:0,duration:1.5}, "-=1")
+    .from(".hero-chain", {scale:.8,rotation:20,opacity:0,duration:1.2}, "-=1.1");
 
   /* HERO PARALLAX */
   gsap.to(".hero-bracelet", {
-    y:-55, rotation:0, ease:"none",
+    y:-55,rotation:0,ease:"none",
     scrollTrigger:{
-      trigger:".hero",start:"top top",
-      end:"bottom top",scrub:1
+      trigger:".hero",start:"top top",end:"bottom top",scrub:1
     }
   });
 
   gsap.to(".hero-chain", {
-    y:65, rotation:20, ease:"none",
+    y:65,rotation:20,ease:"none",
     scrollTrigger:{
-      trigger:".hero",start:"top top",
-      end:"bottom top",scrub:1
+      trigger:".hero",start:"top top",end:"bottom top",scrub:1
     }
   });
 
@@ -1154,24 +1007,44 @@ window.addEventListener("load", () => {
     );
   });
 
-  /* THE SEVEN-SCENE PINNED SCROLL ANIMATION */
-  const stage = document.querySelector(".scroll-stage");
-  const scenes = gsap.utils.toArray(".scene");
+  /* SEVEN SCENES: EACH IMAGE GETS ITS OWN SCROLL MOMENT */
+  const stage = document.querySelector("#scrollStage");
+  const scenes = gsap.utils.toArray("#scrollStage .scene");
   const currentCounter = document.getElementById("sceneCurrent");
   const progressBar = document.getElementById("counterProgress");
 
   if (stage && scenes.length === 7) {
-    const sequence = gsap.timeline({
+
+    /* Set a clean initial state for all seven scenes */
+    scenes.forEach((scene,index) => {
+      const image = scene.querySelector(".scene-image img");
+      const content = scene.querySelector(".scene-content");
+
+      gsap.set(scene, {
+        autoAlpha:index === 0 ? 1 : 0,
+        zIndex:index + 1
+      });
+
+      gsap.set(image, {
+        scale:1.18,
+        xPercent:index % 2 === 0 ? -1.5 : 1.5,
+        rotation:index % 2 === 0 ? -1.2 : 1.2
+      });
+
+      gsap.set(content, {
+        y:35,
+        autoAlpha:0
+      });
+    });
+
+    const sceneTimeline = gsap.timeline({
+      defaults:{ease:"none"},
       scrollTrigger:{
         trigger:stage,
         start:"top top",
-        end:() => "+=" + (
-          window.innerWidth < 650
-            ? window.innerHeight * 7
-            : window.innerHeight * 8.5
-        ),
+        end:() => "+=" + (window.innerHeight * (window.innerWidth < 650 ? 7 : 8)),
         pin:true,
-        scrub:1,
+        scrub:0.8,
         anticipatePin:1,
         invalidateOnRefresh:true,
         onUpdate:self => {
@@ -1179,81 +1052,103 @@ window.addEventListener("load", () => {
             6,
             Math.floor(self.progress * 7)
           );
+
           currentCounter.textContent =
             String(index + 1).padStart(2,"0");
+
           progressBar.style.width =
             ((index + 1) / 7 * 100) + "%";
         }
       }
     });
 
+    const sceneDuration = 1;
+
     scenes.forEach((scene,index) => {
       const image = scene.querySelector(".scene-image img");
       const content = scene.querySelector(".scene-content");
+      const start = index * sceneDuration;
 
-      gsap.set(scene,{
-        autoAlpha:index === 0 ? 1 : 0,
-        zIndex:index + 1
-      });
+      /* Bring the next scene forward */
+      sceneTimeline.to(scene, {
+        autoAlpha:1,
+        duration:0.18,
+        ease:"power1.out"
+      }, start);
 
-      gsap.set(image,{
-        scale:1.22,
-        rotation:index % 2 === 0 ? -2 : 2
-      });
+      /* Animate the product photograph */
+      sceneTimeline.fromTo(image,
+        {
+          scale:1.22,
+          xPercent:index % 2 === 0 ? -2 : 2,
+          rotation:index % 2 === 0 ? -1.5 : 1.5
+        },
+        {
+          scale:1,
+          xPercent:0,
+          rotation:0,
+          duration:sceneDuration,
+          ease:"none"
+        },
+        start
+      );
 
-      gsap.set(content,{
-        y:45,
-        opacity:0
-      });
-
-      if(index === 0){
-        sequence.to(content,{
-          y:0,opacity:1,duration:.7,ease:"power2.out"
-        },0);
-      }
-
-      sequence.to(image,{
-        scale:1,
-        rotation:0,
-        duration:1.7,
-        ease:"none"
-      },index * 1.7);
-
-      if(index > 0){
-        sequence.to(scene,{
-          autoAlpha:1,
-          duration:.35
-        },index * 1.7);
-
-        sequence.to(content,{
+      /* Animate its text */
+      sceneTimeline.fromTo(content,
+        {y:42,autoAlpha:0},
+        {
           y:0,
-          opacity:1,
-          duration:.55,
+          autoAlpha:1,
+          duration:.35,
           ease:"power2.out"
-        },index * 1.7 + .15);
-      }
+        },
+        start + .12
+      );
 
-      if(index < scenes.length - 1){
-        sequence.to(content,{
-          y:-30,
-          opacity:0,
-          duration:.45,
-          ease:"power2.in"
-        },index * 1.7 + 1.15);
-
-        sequence.to(scene,{
+      /* Fade this scene before the next one arrives */
+      if (index < scenes.length - 1) {
+        sceneTimeline.to(content, {
+          y:-24,
           autoAlpha:0,
-          duration:.35
-        },index * 1.7 + 1.4);
+          duration:.18,
+          ease:"power2.in"
+        }, start + .78);
+
+        sceneTimeline.to(scene, {
+          autoAlpha:0,
+          duration:.18,
+          ease:"power1.in"
+        }, start + .82);
       }
     });
 
-    ScrollTrigger.refresh();
+    /* Refresh after image dimensions are available */
+    const sceneImages = stage.querySelectorAll(".scene-image img");
+    let imagesReady = 0;
+
+    sceneImages.forEach(img => {
+      if (img.complete) {
+        imagesReady++;
+      } else {
+        img.addEventListener("load", imageReady, {once:true});
+        img.addEventListener("error", imageReady, {once:true});
+      }
+    });
+
+    function imageReady() {
+      imagesReady++;
+      if (imagesReady >= sceneImages.length) {
+        ScrollTrigger.refresh();
+      }
+    }
+
+    setTimeout(() => ScrollTrigger.refresh(), 700);
   }
 
   /* COLLECTION IMAGE REVEALS */
-  gsap.utils.toArray(".product-card").forEach((card,index) => {
+  gsap.utils.toArray(".product-card").forEach(card => {
     const image = card.querySelector("img");
+
     gsap.fromTo(image,
       {scale:1.13,opacity:.45},
       {
@@ -1287,8 +1182,12 @@ window.addEventListener("load", () => {
       trigger:"footer",start:"top 90%"
     }
   });
+
+  /* Final refresh after layout setup */
+  setTimeout(() => ScrollTrigger.refresh(), 1000);
 });
 </script>
 
 </body>
 </html>
+
