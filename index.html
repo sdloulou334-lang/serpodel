@@ -1018,13 +1018,24 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* PRELOADER */
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("preloader").classList.add("hide");
-    document.body.classList.remove("loading");
-  }, 650);
+/* PRELOADER FIX */
+function hidePreloader() {
+  const preloader = document.getElementById("preloader");
+
+  if (preloader) {
+    preloader.classList.add("hide");
+  }
+
+  document.body.classList.remove("loading");
+}
+
+window.addEventListener("load", hidePreloader);
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(hidePreloader, 1000);
 });
+
+setTimeout(hidePreloader, 2500);
 
 /* WHATSAPP INQUIRY FORM */
 const inquiryForm = document.getElementById("inquiryForm");
@@ -1277,24 +1288,6 @@ window.addEventListener("load", () => {
     }
   });
 });
-</script>
-
-<script>
-(function () {
-  function removeLoader() {
-    const loader = document.getElementById("preloader");
-
-    if (loader) {
-      loader.classList.add("hide");
-    }
-
-    document.body.classList.remove("loading");
-  }
-
-  document.addEventListener("DOMContentLoaded", removeLoader);
-  window.addEventListener("load", removeLoader);
-  setTimeout(removeLoader, 2000);
-})();
 </script>
 
 </body>
